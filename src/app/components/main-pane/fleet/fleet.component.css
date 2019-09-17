@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700');
+
+.box{
+    
+    padding:60px 0px;
+}
+
+
+.box-part1 {
+
+    background:white;
+	margin:30px 0px;
+    box-shadow:0 2px 30px; 
+	cursor: pointer;
+	
+}
+
+.box-part1:hover,
+.box-part1:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+
+  -webkit-box-shadow: 0px 3px 0px rgb(27, 135, 236), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgb(27, 135, 236), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgb(27, 135, 236), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
+
+.box-part2{
+    background:white;
+	margin:30px 0px;
+	box-shadow:0 2px 30px;
+	cursor: pointer;
+}
+
+.box-part2:hover,
+.box-part2:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+  
+	-webkit-box-shadow: 0px 3px 0px rgb(50,205,50), 0px 3px 6px rgba(0,0,0,.9);
+	  -moz-box-shadow: 0px 3px 0px rgb(50,205,50), 0px 3px 6px rgba(0,0,0,.9);
+	  box-shadow: 0px 3px 0px rgb(50,205,50), 0px 3px 6px rgba(0,0,0,.9);
+	  position: relative;
+	  top: 6px;
+}
+
+
+.box-part3{
+    background:white;
+	margin:30px 0px;
+	box-shadow:0 2px 30px;
+	cursor: pointer;
+}
+
+.box-part3:hover,
+.box-part3:focus {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+  
+	-webkit-box-shadow: 0px 3px 0px rgb(252, 17, 17), 0px 3px 6px rgba(0,0,0,.9);
+	  -moz-box-shadow: 0px 3px 0px rgb(252, 17, 17), 0px 3px 6px rgba(0,0,0,.9);
+	  box-shadow: 0px 3px 0px rgb(252, 17, 17), 0px 3px 6px rgba(0,0,0,.9);
+	  position: relative;
+	  top: 6px;
+}
+
+
+
+.text{
+    margin:20px 0px;
+}
+
+.fa{
+     color:#4183D7;
+}
+
+

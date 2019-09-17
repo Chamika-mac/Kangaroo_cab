@@ -1,0 +1,13 @@
+.mainDiv {
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    width: 60%;
+}
+
+.card {
+    padding: 5%;
+    /* background: linear-gradient(to bottom, #00ccff -296%, #ffffff 80%); */
+    background: linear-gradient(to bottom, #8e24aa -296%, #ffffff 80%);
+}
