@@ -4,3 +4,8 @@
     /* background: linear-gradient(to bottom, #00ccff -296%, #ffffff 80%); */
     background: linear-gradient(to bottom, #8e24aa -296%, #ffffff 80%);
 }
+
+
+.img01 {
+    cursor: pointer;
+}
