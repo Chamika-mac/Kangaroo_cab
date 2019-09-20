@@ -18,36 +18,36 @@
       <div class="row">
         <div class="input-field col s6">
           <input id="fname" type="text" class="validate" name="fname" [(ngModel)]='user.fname' required>
-          <label for="fname">First Name</label>
+          <label for="fname" style="color: rgb(146, 8, 15)">First Name</label>
         </div>
         <div class="input-field col s6">
           <input id="lname" type="text" class="validate" name="lname" [(ngModel)]='user.lname' required>
           
-          <label for="lname">Last Name</label>
+          <label for="lname" style="color: rgb(146, 8, 15)">Last Name</label>
         </div>
       </div>
 
       <div class="row">
             <div class="input-field col s6">
                 <input id="nic" type="text" name="nic" [(ngModel)]='user.nic'  required>
-                <label for="nic">NIC</label>
+                <label for="nic" style="color: rgb(146, 8, 15)">NIC</label>
             </div>
             <div class="input-field col s6">
                     <input id="hometown" type="text" name="hometown" [(ngModel)]='user.hometown' required>
-                    <label for="hometown">Hometown</label>
+                    <label for="hometown" style="color: rgb(146, 8, 15)">Hometown</label>
                 </div>
           </div>
           <div class="row">
             <div class="input-field col s6">
                 <input  id="email" type="email" name="email" [(ngModel)]='user.email' required>
-                <label for="email">E-Mail</label>
+                <label for="email" style="color: rgb(146, 8, 15)">E-Mail</label>
             </div>
           </div>
           <div class="row">
           
             <div class="input-field col s6">
                     <input id="username" type="text" name="username" [(ngModel)]='user.username' required>
-                    <label for="username">Username</label>
+                    <label for="username" style="color: rgb(146, 8, 15)">Username</label>
                 </div>
           </div>
 
@@ -57,18 +57,18 @@
                 <table>
                   <tr>
                     <td > 
-                        <label class="a" >Gender:</label>
+                        <label class="a" style="color: rgb(146, 8, 15)">Gender:</label>
                 
                         <p>
                           <label>
-                            <input class="with-gap" name="gender" type="radio" [(ngModel)]='user.gender'  checked required/>
-                            <span>Male</span>
+                            <input class="with-gap" name="gender" type="radio" [(ngModel)]='user.gender' value="male"  checked required/>
+                            <span style="color: rgb(146, 8, 15)">Male</span>
                           </label>
                         </p>
                         <p>
                           <label>
-                            <input class="with-gap" name="gender" type="radio" [(ngModel)]='user.gender' checked />
-                            <span>Female</span>
+                            <input class="with-gap" name="gender" type="radio" [(ngModel)]='user.gender' value="female" checked />
+                            <span style="color: rgb(146, 8, 15)">Female</span>
                           </label>
                         </p>
                     </td>
@@ -104,26 +104,27 @@
       <div class="row">
             <div class="input-field col s6">
               <input id="password" type="password" class="validate" name="password" [(ngModel)]='user.password' required>
-              <label for="password">Password</label>
+              <label for="password" style="color: rgb(146, 8, 15)">Password</label>
             </div>
             <div class="input-field col s6">
                     <input id="confirmpassword" type="password" class="validate" name="cpassword" [(ngModel)]='confirmpassword'  required>
-                    <label for="confirmpassword">Confirm-Password</label>
+                    <label for="confirmpassword" style="color: rgb(146, 8, 15)">Confirm-Password</label>
             </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
             <input id="mobile" type="number" name="mobile" [(ngModel)]='user.mobile' required>
-            <label for="mobile">Mobile Number</label>
+            <label for="mobile" style="color: rgb(146, 8, 15)">Mobile Number</label>
         </div>
         <div class="input-field col s6">
                 <input id="land" type="Number" name="land" [(ngModel)]='user.land'  required>
-                <label for="land">Landline</label>
+                <label for="land" style="color: rgb(146, 8, 15)">Landline</label>
             </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <textarea
+          style="color: rgb(146, 8, 15)"
          
           placeholder="Address"
           [(ngModel)]='user.address'
@@ -140,18 +141,18 @@
           <table>
             <tr>
               <td > 
-                  <label class="a" >Register as:</label>
+                  <label class="a"style="color: rgb(146, 8, 15)" >Register as:</label>
           
                   <p>
                     <label>
-                      <input class="with-gap" name="ty" type="radio" [(ngModel)]='user.ty' checked required/>
-                      <span>Driver</span>
+                      <input class="with-gap" name="ty" type="radio" [(ngModel)]='user.ty' value="driver" checked required/>
+                      <span style="color: rgb(146, 8, 15)">Driver</span>
                     </label>
                   </p>
                   <p>
                     <label>
-                      <input class="with-gap" name="ty" type="radio" [(ngModel)]='user.ty'  checked />
-                      <span>Customer</span>
+                      <input class="with-gap" name="ty" type="radio" [(ngModel)]='user.ty' value="customer"  checked />
+                      <span style="color: rgb(146, 8, 15)">Customer</span>
                     </label>
                   </p>
               </td>
