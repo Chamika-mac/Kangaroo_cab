@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainPaneComponent } from './components/main-pane/main-pane.component';
@@ -18,7 +22,9 @@ import { LocalComponent } from './components/main-pane/fleet/local/local.compone
 import { TourComponent } from './components/main-pane/fleet/tour/tour.component';
 import { DefaultComponent } from './components/main-pane/fleet/default/default.component';
 import { ToastrModule } from 'ngx-toastr';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { TermsComponent } from './components/main-pane/terms/terms.component';
+import { FaqComponent } from './components/main-pane/faq/faq.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/mainUi', pathMatch: 'full' },
@@ -28,6 +34,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: 'feedback', component: FeedbackComponent },
+  { path: 'terms', component: TermsComponent },
+  { path: 'faq', component: FaqComponent },
   { path: 'fleet', component: FleetComponent,
     children: [
       { path: '', redirectTo: 'default', pathMatch: 'full' },
@@ -54,16 +62,21 @@ const appRoutes: Routes = [
     AirportComponent,
     LocalComponent,
     TourComponent,
-    DefaultComponent
+    DefaultComponent,
+    TermsComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
+    
     ToastrModule.forRoot(),
     FormsModule,
     
+    FormsModule,
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
+    RouterModule.forRoot(appRoutes)
     
   ],
   providers: [],
