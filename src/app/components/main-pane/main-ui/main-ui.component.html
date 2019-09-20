@@ -1,79 +1,90 @@
 <div class="row">
 
-        <div class="col-xl-6">
-          <img src="/assets/app-1.png" id="image" style="width: 100%">
+  <div class="col-xl-6">
+    <img src="/assets/app-1.png" id="image" style="width: 100%">
 
+  </div>
+
+  <div class="col-xl-6">
+
+    <div class="card">
+      <form style="padding: 5%" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h1 style="color: #d81b60">Quick Booking</h1>
+
+
+        <div class="row">
+          <img src="/assets/tuk.svg" class="img-thumbnail border border-warning img01" alt="Tuk"
+            style="width: 15%; margin-left: 2%">
+          <img src="/assets/budget.svg" class="img-thumbnail border border-warning img01" alt="Budget"
+            style="width: 15%; margin-left: 1%">
+          <img src="/assets/car.svg" class="img-thumbnail border border-warning img01" alt="Car"
+            style="width: 15%; margin-left: 1%">
+          <img src="/assets/city.svg" class="img-thumbnail border border-warning img01" alt="City"
+            style="width: 15%; margin-left: 1%">
+          <img src="/assets/minivan.svg" class="img-thumbnail border border-warning img01" alt="Minivan"
+            style="width: 15%; margin-left: 1%">
+          <img src="/assets/van.svg" class="img-thumbnail border border-warning img01" alt="Van"
+            style="width: 15%; margin-left: 1%">
         </div>
-      
-        <div class="col-xl-6">
-          
-          <div class="card">
-              <form style="padding: 5%">
-                  <h1 style="color: #d81b60">Quick Booking</h1>
-
-
-                  <div class="row">
-                      <img src="/assets/tuk.svg" class="img-thumbnail border border-warning img01" alt="Tuk" style="width: 15%; margin-left: 2%">
-                      <img src="/assets/budget.svg" class="img-thumbnail border border-warning img01" alt="Budget" style="width: 15%; margin-left: 1%"> 
-                      <img src="/assets/car.svg" class="img-thumbnail border border-warning img01" alt="Car" style="width: 15%; margin-left: 1%">
-                      <img src="/assets/city.svg" class="img-thumbnail border border-warning img01" alt="City" style="width: 15%; margin-left: 1%">
-                      <img src="/assets/minivan.svg" class="img-thumbnail border border-warning img01" alt="Minivan" style="width: 15%; margin-left: 1%">
-                      <img src="/assets/van.svg" class="img-thumbnail border border-warning img01" alt="Van" style="width: 15%; margin-left: 1%"> 
-                  </div>
 
 
 
-                  <div class="row">
-
-                      
+        <div class="row">
 
 
 
-                      <div class="input-field col s6">
-                        <input id="first_name" type="text">
-                        <label for="first_name" style="color: rgb(146, 8, 15)">First Name</label>
-                      </div>
-                      <div class="input-field col s6">
-                        <input id="last_name" type="text">
-                        <label for="last_name" style="color: rgb(146, 8, 15)">Last Name</label>
-                      </div>
-                  </div>
 
-                    <div class="row">
-                        <div class="input-field col s6">
-                          <input placeholder="" id="first_name" type="date">
-                          <label for="first_name" style="color: rgb(146, 8, 15)">Pickup Date</label>
-                        </div>
-                        <div class="input-field col s6">
-                          <input placeholder="" id="last_name" type="time">
-                          <label for="last_name" style="color: rgb(146, 8, 15)">Pickup Time</label>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input id="telephone" type="text">
-                            <label for="last_name" style="color: rgb(146, 8, 15)">Telephone (+94)</label>
-                          </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col s12">
-                          <input id="first_name" type="email">
-                          <label for="first_name" style="color: rgb(146, 8, 15)">Email</label>
-                        </div>
-                    </div>  
-
-                    <div class="row">
-                        <button type="button" class="btn btn-info" style="width: 20%"><b>Clear</b></button>
-                        &nbsp;
-                        <button type="button" class="btn btn-success" style="width: 79%"><b>Confirm Booking</b></button>
-                    </div>
-                    
-                </form>
+          <div class="input-field col s6">
+            <input id="first_name" type="text" formControlName="firstName" [(ngModel)]="firstName">
+            <label for="first_name" style="color: rgb(146, 8, 15)">First Name</label>
+            <span *ngIf="!form.get('firstName').valid && form.get('firstName').touched" class="help-block">Enter First Name (Ex:- Ruwan)</span>
           </div>
-
+          <div class="input-field col s6">
+            <input id="last_name" type="text" formControlName="lastName" [(ngModel)]="lastName">
+            <label for="last_name" style="color: rgb(146, 8, 15)">Last Name</label>
+            <span *ngIf="!form.get('lastName').valid && form.get('lastName').touched" class="help-block">Enter Last Name (Ex:- Bandara)</span>
+          </div>
         </div>
- 
-</div>
 
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="" id="first_name" type="date" formControlName="date" [(ngModel)]="date">
+            <label for="first_name" style="color: rgb(146, 8, 15)">Pickup Date</label>
+            <span *ngIf="!form.get('date').valid && form.get('date').touched" class="help-block">Select a Date (Ex:- 05/25/2019)</span>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="" id="last_name" type="time" formControlName="time" [(ngModel)]="time">
+            <label for="last_name" style="color: rgb(146, 8, 15)">Pickup Time</label>
+            <span *ngIf="!form.get('time').valid && form.get('time').touched" class="help-block">Enter the Time (Ex:- 10:25 AM)</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="telephone" type="text" formControlName="telephone" pattern="[0-9]*" [(ngModel)]="telephone">
+            <label for="last_name" style="color: rgb(146, 8, 15)">Telephone (+94)</label>
+            <span *ngIf="!form.get('telephone').valid && form.get('telephone').touched" class="help-block">Enter your number (Ex:- 0775687469)</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="first_name" type="email" formControlName="email" [(ngModel)]="email">
+            <label for="first_name" style="color: rgb(146, 8, 15)">Email</label>
+            <span *ngIf="!form.get('email').valid && form.get('email').touched" class="help-block">Enter your email (Ex:- ruwan.b@gmail.com)</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <button type="button" class="btn btn-info" style="width: 20%" (click)="buttonClear()"><b>Clear</b></button>
+          &nbsp;
+          <button type="button" class="btn btn-success" style="width: 79%"><b>Confirm Booking</b></button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+</div>
