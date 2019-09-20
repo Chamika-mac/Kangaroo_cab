@@ -56,6 +56,9 @@ export class RegisterComponent implements OnInit {
       nic: '',
     }
   }
+  cancel(){
+    this.ngOnInit()
+  }
 
   async adduser(){
 
