@@ -1,72 +1,192 @@
-<div class="mainDiv">
-    <div class="card">
-        
-  <div class="row">
-        
-        <form class="col s12">
-                <h1 style="color: #d81b60">Register Here</h1>
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
-            </div>
-          </div>
+<div class="row">
 
-          <div class="row">
-                <div class="input-field col s6">
-                    <input placeholder="" id="birthday" type="date">
-                    <label for="last_name">Birthday</label>
-                </div>
-                <div class="input-field col s6">
-                        <input id="hometown" type="text">
-                        <label for="last_name">Hometown</label>
-                    </div>
-              </div>
+    <div class="col-xl-6">
+     <img class="image" src="assets/reg.png" style="width: 100%" height="80%" >
 
-          <div class="row">
-            <div class="input-field col s12">
-                    <input id="address1" type="text">
-                    <label for="last_name">Address Line 01</label>
-            </div>
-          </div>
-
-          <div class="row">
-                <div class="input-field col s12">
-                        <input id="address1" type="text">
-                        <label for="last_name">Address Line 02</label>
-                </div>
-              </div>
-
-          
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate">
-              <label for="email">Email</label>
-            </div>
-          </div>
-
-          <div class="row">
-                <div class="input-field col s6">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
-                </div>
-                <div class="input-field col s6">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Re-Password</label>
-                </div>
-          </div>
-
-          <div class="row">
-                <button type="button" class="btn btn-success col s12"><b>Register</b></button>
-            </div>
-
-
-        </form>
-      </div>
-            
     </div>
+  
+    <div class="col-xl-6">
+      
+      <div class="mainDiv">
+<div class="card">
+  
+    
+<div class="row">
+    
+    <form class="col s12">
+            <h1 style="color: #d81b60 ;" >Register Here..</h1>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="fname" type="text" class="validate" name="fname" [(ngModel)]='user.fname' required>
+          <label for="fname">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="lname" type="text" class="validate" name="lname" [(ngModel)]='user.lname' required>
+          
+          <label for="lname">Last Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+            <div class="input-field col s6">
+                <input id="nic" type="text" name="nic" [(ngModel)]='user.nic'  required>
+                <label for="nic">NIC</label>
+            </div>
+            <div class="input-field col s6">
+                    <input id="hometown" type="text" name="hometown" [(ngModel)]='user.hometown' required>
+                    <label for="hometown">Hometown</label>
+                </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+                <input  id="email" type="email" name="email" [(ngModel)]='user.email' required>
+                <label for="email">E-Mail</label>
+            </div>
+          </div>
+          <div class="row">
+          
+            <div class="input-field col s6">
+                    <input id="username" type="text" name="username" [(ngModel)]='user.username' required>
+                    <label for="username">Username</label>
+                </div>
+          </div>
+
+
+          <div class="row">
+              <div >
+                <table>
+                  <tr>
+                    <td > 
+                        <label class="a" >Gender:</label>
+                
+                        <p>
+                          <label>
+                            <input class="with-gap" name="gender" type="radio" [(ngModel)]='user.gender'  checked required/>
+                            <span>Male</span>
+                          </label>
+                        </p>
+                        <p>
+                          <label>
+                            <input class="with-gap" name="gender" type="radio" [(ngModel)]='user.gender' checked />
+                            <span>Female</span>
+                          </label>
+                        </p>
+                    </td>
+                    <td style="padding-left: 20%">
+                      <img src="assets/kangaro.png" style="width: 50%">
+      
+                    </td>
+                    <td style="padding-left: 10%">
+                        <img src="assets/kangaro.png" style="width: 50%">
+        
+                      </td>
+                      <td style="padding-left: 5%">
+                          <img src="assets/kangaro.png" style="width: 50%">
+          
+                        </td>
+                        
+                      
+                  </tr>
+                </table>
+      
+                  
+                
+      
+              </div>
+            </div>
+
+     
+
+      
+
+      
+  
+      <div class="row">
+            <div class="input-field col s6">
+              <input id="password" type="password" class="validate" name="password" [(ngModel)]='user.password' required>
+              <label for="password">Password</label>
+            </div>
+            <div class="input-field col s6">
+                    <input id="confirmpassword" type="password" class="validate" name="cpassword" [(ngModel)]='confirmpassword'  required>
+                    <label for="confirmpassword">Confirm-Password</label>
+            </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+            <input id="mobile" type="number" name="mobile" [(ngModel)]='user.mobile' required>
+            <label for="mobile">Mobile Number</label>
+        </div>
+        <div class="input-field col s6">
+                <input id="land" type="Number" name="land" [(ngModel)]='user.land'  required>
+                <label for="land">Landline</label>
+            </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea
+         
+          placeholder="Address"
+          [(ngModel)]='user.address'
+          name="address"
+          style="height: 65px"
+          required
+        ></textarea>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div >
+          <table>
+            <tr>
+              <td > 
+                  <label class="a" >Register as:</label>
+          
+                  <p>
+                    <label>
+                      <input class="with-gap" name="ty" type="radio" [(ngModel)]='user.ty' checked required/>
+                      <span>Driver</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input class="with-gap" name="ty" type="radio" [(ngModel)]='user.ty'  checked />
+                      <span>Customer</span>
+                    </label>
+                  </p>
+              </td>
+              <td style="padding-left: 20%">
+                <img src="assets/kangaro.png" style="width: 50%">
+
+              </td>
+              <td style="padding-left: 10%">
+                  <img src="assets/kangaro.png" style="width: 50%">
+  
+                </td>
+                <td style="padding-left: 5%">
+                    <img src="assets/kangaro.png" style="width: 50%">
+    
+                  </td>
+                  
+                
+            </tr>
+          </table>
+
+            
+          
+
+        </div>
+      </div>
+
+
+
+      <div class="row">
+            <button class="btn btn-success col s12" style="background: darkcyan" (click)="adduser()"><b>Register</b></button>
+        </div>
+
+
+    </form>
+  </div>
+        
+</div>
 </div>

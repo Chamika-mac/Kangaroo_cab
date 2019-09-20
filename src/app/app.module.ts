@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,8 @@ import { AirportComponent } from './components/main-pane/fleet/airport/airport.c
 import { LocalComponent } from './components/main-pane/fleet/local/local.component';
 import { TourComponent } from './components/main-pane/fleet/tour/tour.component';
 import { DefaultComponent } from './components/main-pane/fleet/default/default.component';
+import { ToastrModule } from 'ngx-toastr';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/mainUi', pathMatch: 'full' },
@@ -55,8 +58,13 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ToastrModule.forRoot(),
+    FormsModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
