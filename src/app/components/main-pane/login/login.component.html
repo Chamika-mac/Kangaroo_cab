@@ -1,41 +1,56 @@
-<div class="mainDiv">
-  <div class="card">
-
-    <div class="row">
-
-      <form class="col s12">
-        <h1 style="color: #d81b60">Login Here</h1>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email">
-            <label for="last_name" style="color: rgb(146, 8, 15)">Email</label>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
-            <label for="email" style="color: rgb(146, 8, 15)">Password</label>
-          </div>
-        </div>
-
-        <p>
-          <label>
-            <input type="checkbox" class="filled-in" checked="checked" />
-            <span style="color: rgb(146, 8, 15)">Remember Password</span>
-          </label>
-        </p>
-
-        <div class="row">
-          <button type="button" class="btn btn-info" style="width: 20%"><b>Clear</b></button>
-          &nbsp;
-          <button type="button" class="btn btn-success" style="width: 79%"><b>Login</b></button>
-        </div>
-
-
-      </form>
+<div class="mainDiv form-row">
+    <div class="col-xl-6">
+        <img src="/assets/about-2.png" style="width: 90%; margin-left: 15%">
     </div>
 
-  </div>
+    <div class="col-xl-6">
+        <div class="card">
+
+            <div class="row">
+                <form class="col-md-12" [formGroup]="form">
+                    <h1 style="color: #d81b60">Login Here</h1>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="inputEmail4" style="color: rgb(146, 8, 15)">Email</label>
+                            <input id="inputEmail4" type="email" class="form-control" formControlName="username"
+                                [(ngModel)]="username" placeholder="Enter email">
+
+                            <span *ngIf="!form.get('username').valid && form.get('username').touched"
+                                class="help-block">Enter email (Ex:- ruwan.b@gmail.com)</span>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="inputEmail4" style="color: rgb(146, 8, 15)">Password</label>
+                            <input id="inputEmail4" type="password" class="form-control" formControlName="password"
+                                [(ngModel)]="password" placeholder="Enter password">
+
+                            <span *ngIf="!form.get('password').valid && form.get('password').touched"
+                                class="help-block">Enter password</span>
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" style="color: rgb(146, 8, 15)">Remember Password</label>
+                    </div>
+                    <br>
+                    <br>
+
+
+                    <div class="row">
+                        <button type="button" class="btn btn-info" style="width: 20%"
+                            (click)="buttonClear()"><b>Clear</b></button>
+                        &nbsp;
+                        <button type="button" class="btn btn-success" style="width: 79%"><b>Login</b></button>
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+    </div>
 </div>

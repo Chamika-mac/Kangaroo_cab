@@ -25,6 +25,8 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { TermsComponent } from './components/main-pane/terms/terms.component';
 import { FaqComponent } from './components/main-pane/faq/faq.component';
+import { TestingComponent } from './components/testing/testing.component';
+import { RateUsComponent } from './components/main-pane/rate-us/rate-us.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/mainUi', pathMatch: 'full' },
@@ -36,6 +38,8 @@ const appRoutes: Routes = [
   { path: 'feedback', component: FeedbackComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'faq', component: FaqComponent },
+  { path: 'rate-us', component: RateUsComponent },
+  { path: 'testing', component: TestingComponent },
   { path: 'fleet', component: FleetComponent,
     children: [
       { path: '', redirectTo: 'default', pathMatch: 'full' },
@@ -64,7 +68,9 @@ const appRoutes: Routes = [
     TourComponent,
     DefaultComponent,
     TermsComponent,
-    FaqComponent
+    FaqComponent,
+    TestingComponent,
+    RateUsComponent
   ],
   imports: [
     BrowserModule,

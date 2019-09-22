@@ -6,12 +6,20 @@
 }
 
 
-.img01 {
+.img01   {
+    cursor: pointer;
+    background-color: rgb(236, 236, 171);
+}
+
+.click {
     cursor: pointer;
 }
 
 span {
     color: red;
     font-size: 75%;
-
 }
+
+/* .click :hover {
+    border: 1px solid #ddd;
+} */

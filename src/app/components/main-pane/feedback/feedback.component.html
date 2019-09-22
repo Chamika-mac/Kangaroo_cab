@@ -1,112 +1,70 @@
-<h3 style="color: #000000" style="text-align: center; margin-top: 2%"><i>Your feedback is welcome.</i></h3>
-<div class="row">
+<div>
 
-	
+	<h2 style="text-align: center; margin-top: 2%; color:#d81b60"><i>Tell us about your experience</i>
+	</h2>
 
-	<div class="col-xl-6" style="padding: 10%">
-		
-		<div class="card1">
-			<table class="table table-borderless">
-				<h2 style="color: #d81b60">Rate Us!</h2>
-				<tbody>
-					<tr>
-						<td>Your Last Trip</td>
-						<td>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-						</td>
-					</tr>
-					<tr>
-						<td>Your Last Trip Vehicle</td>
-						<td>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-						</td>
-					</tr>
-					<tr>
-						<td>Your Last Trip Driver</td>
-						<td>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star "></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-						</td>
-					</tr>
-					<tr>
-						<td>Kangaroo cab Web Site</td>
-						<td>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-			<button type="button" class="btn btn-outline-success col s4 right"><b>Rate</b></button>
+
+	<div class="row">
+
+		<div class="col-xl-6">
+			<img src="/assets/feedback.png" style="width: 75%; margin-left: 15%">
 		</div>
-	</div>
 
-	<div class="col-xl-6">
+		<div class="col-xl-6">
 
-		<div class="card card2">
-			<form style="padding: 5%">
-				<h1 style="color: #d81b60">Get in Touch</h1>
-				<p style="color: #ffab00">We would love to hear from you</p>
+			<div class="card card2">
+				<form style="padding: 5%" [formGroup]="form">
+					<h1 style="color: #d81b60">Get in Touch</h1>
 
-				<div class="row">
-					<div class="input-field col s6">
-						<input id="first_name" type="text">
-						<label for="first_name">First Name</label>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="first_name" style="color: rgb(146, 8, 15)">First Name</label>
+							<input id="first_name" type="text" class="form-control" formControlName="fname" placeholder="First Name">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="last_name" style="color: rgb(146, 8, 15)">Last Name</label>
+							<input id="last_name" type="text" class="form-control" formControlName="lname" placeholder="Last Name">
+						</div>
 					</div>
-				</div>
 
-				<div class="row">
-					<div class="input-field col s6">
-						<input id="last_name" type="text">
-						<label for="last_name">Last Name</label>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label for="first_name" style="color: rgb(146, 8, 15)">Email</label>
+							<input id="first_name" type="email" class="form-control" formControlName="email" placeholder="Your email">
+						</div>
 					</div>
-				</div>
-
-				<div class="row">
-					<div class="input-field col s12">
-						<input id="first_name" type="email">
-						<label for="first_name">Email</label>
-					</div>
-				</div>
 
 
-				<div class="row">
-					<div class="col s12">
-						<div class="row">
-							<div class="input-field col s12">
-								<input type="text" id="autocomplete-input" class="autocomplete">
-								<label for="autocomplete-input">Enter Your Message</label>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<div class="row">
+								<div class="input-field col s12">
+									<label for="autocomplete-input" style="color: rgb(146, 8, 15)">Enter Your
+										Message</label>
+									<input type="text" id="autocomplete-input" class="form-control" formControlName="message" placeholder="Your Message">
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+					<br>
+					<br>
+
+					<div class="row">
+						<button type="button" class="btn btn-info" style="width: 20%"
+							(click)="buttonClear()"><b>Clear</b></button>
+						&nbsp;
+						<button type="button" class="btn btn-success" style="width: 79%"><b>Confirm
+								Booking</b></button>
+					</div>
+
+				</form>
 
 
-				<div class="row">
-					<button type="button" class="btn btn-success col s12"><b>Send Message</b></button>
-				</div>
-
-			</form>
-
+			</div>
+			<br>
+			<br>
 
 		</div>
-		<br>
-		<br>
 
 	</div>
-
 </div>

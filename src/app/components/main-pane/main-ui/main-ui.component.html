@@ -1,90 +1,125 @@
-<div class="row">
+<div class="form-row">
 
-  <div class="col-xl-6">
-    <img src="/assets/app-1.png" id="image" style="width: 100%">
+    <div class="col-xl-6">
+        <img src="/assets/app-1.png" id="image" style="width: 100%">
 
-  </div>
-
-  <div class="col-xl-6">
-
-    <div class="card">
-      <form style="padding: 5%" [formGroup]="form" (ngSubmit)="onSubmit()">
-        <h1 style="color: #d81b60">Quick Booking</h1>
-
-
-        <div class="row">
-          <img src="/assets/tuk.svg" class="img-thumbnail border border-warning img01" alt="Tuk"
-            style="width: 15%; margin-left: 2%">
-          <img src="/assets/budget.svg" class="img-thumbnail border border-warning img01" alt="Budget"
-            style="width: 15%; margin-left: 1%">
-          <img src="/assets/car.svg" class="img-thumbnail border border-warning img01" alt="Car"
-            style="width: 15%; margin-left: 1%">
-          <img src="/assets/city.svg" class="img-thumbnail border border-warning img01" alt="City"
-            style="width: 15%; margin-left: 1%">
-          <img src="/assets/minivan.svg" class="img-thumbnail border border-warning img01" alt="Minivan"
-            style="width: 15%; margin-left: 1%">
-          <img src="/assets/van.svg" class="img-thumbnail border border-warning img01" alt="Van"
-            style="width: 15%; margin-left: 1%">
-        </div>
-
-
-
-        <div class="row">
-
-
-
-
-
-          <div class="input-field col s6">
-            <input id="first_name" type="text" formControlName="firstName" [(ngModel)]="firstName">
-            <label for="first_name" style="color: rgb(146, 8, 15)">First Name</label>
-            <span *ngIf="!form.get('firstName').valid && form.get('firstName').touched" class="help-block">Enter First Name (Ex:- Ruwan)</span>
-          </div>
-          <div class="input-field col s6">
-            <input id="last_name" type="text" formControlName="lastName" [(ngModel)]="lastName">
-            <label for="last_name" style="color: rgb(146, 8, 15)">Last Name</label>
-            <span *ngIf="!form.get('lastName').valid && form.get('lastName').touched" class="help-block">Enter Last Name (Ex:- Bandara)</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="input-field col s6">
-            <input placeholder="" id="first_name" type="date" formControlName="date" [(ngModel)]="date">
-            <label for="first_name" style="color: rgb(146, 8, 15)">Pickup Date</label>
-            <span *ngIf="!form.get('date').valid && form.get('date').touched" class="help-block">Select a Date (Ex:- 05/25/2019)</span>
-          </div>
-          <div class="input-field col s6">
-            <input placeholder="" id="last_name" type="time" formControlName="time" [(ngModel)]="time">
-            <label for="last_name" style="color: rgb(146, 8, 15)">Pickup Time</label>
-            <span *ngIf="!form.get('time').valid && form.get('time').touched" class="help-block">Enter the Time (Ex:- 10:25 AM)</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="input-field col s6">
-            <input id="telephone" type="text" formControlName="telephone" pattern="[0-9]*" [(ngModel)]="telephone">
-            <label for="last_name" style="color: rgb(146, 8, 15)">Telephone (+94)</label>
-            <span *ngIf="!form.get('telephone').valid && form.get('telephone').touched" class="help-block">Enter your number (Ex:- 0775687469)</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="first_name" type="email" formControlName="email" [(ngModel)]="email">
-            <label for="first_name" style="color: rgb(146, 8, 15)">Email</label>
-            <span *ngIf="!form.get('email').valid && form.get('email').touched" class="help-block">Enter your email (Ex:- ruwan.b@gmail.com)</span>
-          </div>
-        </div>
-
-        <div class="row">
-          <button type="button" class="btn btn-info" style="width: 20%" (click)="buttonClear()"><b>Clear</b></button>
-          &nbsp;
-          <button type="button" class="btn btn-success" style="width: 79%"><b>Confirm Booking</b></button>
-        </div>
-
-      </form>
     </div>
 
-  </div>
+    <div class="col-xl-6">
+
+        <div class="card">
+            <form style="padding: 5%" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <h1 style="color: #d81b60">Quick Booking</h1>
+
+
+                <div class="row">
+                    <img src="/assets/tuk.svg" class="" alt="Tuk" style="width: 15%; margin-left: 2%"
+                        (click)="status=!status"
+                        [ngClass]="status ? 'img-thumbnail border border-danger img01' : 'img-thumbnail border border-warning click'">
+                    <img src="/assets/budget.svg" class="" alt="Budget" style="width: 15%; margin-left: 1%"
+                        (click)="status1=!status1"
+                        [ngClass]="status1 ? 'img-thumbnail border border-danger img01' : 'img-thumbnail border border-warning click'">
+                    <img src="/assets/city.svg" class="" alt="City" style="width: 15%; margin-left: 1%"
+                        (click)="status3=!status3"
+                        [ngClass]="status3 ? 'img-thumbnail border border-danger img01' : 'img-thumbnail border border-warning click'">
+                    <img src="/assets/car.svg" class="" alt="Car" style="width: 15%; margin-left: 1%"
+                        (click)="status2=!status2"
+                        [ngClass]="status2 ? 'img-thumbnail border border-danger img01' : 'img-thumbnail border border-warning click'">
+
+                    <img src="/assets/minivan.svg" class="" alt="Minivan" style="width: 15%; margin-left: 1%"
+                        (click)="status4=!status4"
+                        [ngClass]="status4 ? 'img-thumbnail border border-danger img01' : 'img-thumbnail border border-warning click'">
+                    <img src="/assets/van.svg" class="" alt="Van" style="width: 15%; margin-left: 1%"
+                        (click)="status5=!status5"
+                        [ngClass]="status5 ? 'img-thumbnail border border-danger img01' : 'img-thumbnail border border-warning click'">
+                </div>
+
+
+
+                <div class="form-row">
+
+
+
+
+
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4" style="color: rgb(146, 8, 15)">First Name</label>
+                        <input id="inputEmail4" class="form-control" type="text" placeholder="First Name"
+                            formControlName="firstName" [(ngModel)]="firstName">
+                        <span *ngIf="!form.get('firstName').valid && form.get('firstName').touched"
+                            class="help-block">Enter First
+                            Name (Ex:- Ruwan)</span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="last_name" style="color: rgb(146, 8, 15)">Last Name</label>
+                        <input id="last_name" class="form-control" type="text" placeholder="Last Name"
+                            formControlName="lastName" [(ngModel)]="lastName">
+                        <span *ngIf="!form.get('lastName').valid && form.get('lastName').touched"
+                            class="help-block">Enter Last Name
+                            (Ex:- Bandara)</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="first_name" style="color: rgb(146, 8, 15)">Pickup Date</label>
+                        <input placeholder="" id="first_name" type="date" class="form-control" formControlName="date"
+                            [(ngModel)]="date">
+                        <span *ngIf="!form.get('date').valid && form.get('date').touched" class="help-block">Select a
+                            Date (Ex:-
+                            05/25/2019)</span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="last_name" style="color: rgb(146, 8, 15)">Pickup Time</label>
+                        <input placeholder="" id="last_name" type="time" class="form-control" formControlName="time"
+                            [(ngModel)]="time">
+                        <span *ngIf="!form.get('time').valid && form.get('time').touched" class="help-block">Enter the
+                            Time (Ex:-
+                            10:25 AM)</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="last_name" style="color: rgb(146, 8, 15)">Telephone (+94)</label>
+                        <input id="telephone" type="text" class="form-control" placeholder="Enter Telephone Number"
+                            formControlName="telephone" pattern="[0-9]*" [(ngModel)]="telephone">
+                        <span *ngIf="!form.get('telephone').valid && form.get('telephone').touched"
+                            class="help-block">Enter your
+                            number (Ex:- 0775687469)</span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="last_name" style="color: rgb(146, 8, 15)">Pickup Location</label>
+                        <input id="location" type="text" class="form-control" placeholder="Select Location"
+                            formControlName="location" [(ngModel)]="location">
+                        <span *ngIf="!form.get('location').valid && form.get('location').touched"
+                            class="help-block">Select your location</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="first_name" style="color: rgb(146, 8, 15)">Email</label>
+                        <input id="first_name" type="email" class="form-control" placeholder="Enter email"
+                            formControlName="email" [(ngModel)]="email">
+                        <span *ngIf="!form.get('email').valid && form.get('email').touched" class="help-block">Enter
+                            your email
+                            (Ex:- ruwan.b@gmail.com)</span>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <div class="row">
+                    <button type="button" class="btn btn-info" style="width: 20%"
+                        (click)="buttonClear()"><b>Clear</b></button>
+                    &nbsp;
+                    <button type="button" class="btn btn-success" style="width: 79%"><b>Confirm Booking</b></button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
 
 </div>

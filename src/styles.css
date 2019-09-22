@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     background: linear-gradient(to bottom, #c2185b -296%, #ffffff 80%);
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    /* background-image: url("/assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
 }

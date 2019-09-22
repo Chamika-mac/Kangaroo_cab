@@ -15,6 +15,7 @@ export class MainUiComponent implements OnInit {
   time: string;
   telephone: string;
   email: string;
+  location: string;
 
   constructor() {
 
@@ -32,17 +33,20 @@ export class MainUiComponent implements OnInit {
       date: new FormControl(null, Validators.required),
       time: new FormControl(null, Validators.required),
       telephone: new FormControl(null, Validators.required),
-      email: new FormControl(null, Validators.required)
+      email: new FormControl(null, Validators.required),
+      location: new FormControl(null, Validators.required)
     });
   }
 
   buttonClear() {
+    this.ngOnInit();
     this.firstName = '';
     this.lastName = '';
     this.date = '';
     this.time = '';
     this.email = '';
     this.telephone = '';
+    this.location = '';
   }
 
 }

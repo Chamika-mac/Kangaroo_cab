@@ -1,13 +1,20 @@
 .mainDiv {
-    left: 50%;
-    position: relative;
-    top: 50%;
-    transform: translate(-50%, 0%);
-    width: 40%;
+    padding: 2%;
 }
 
 .card {
-    padding: 5%;
-    /* background: linear-gradient(to bottom, #00ccff -296%, #ffffff 80%); */
+    left: 50%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 62%;
+    padding: 3%;
     background: linear-gradient(to bottom, #8e24aa -296%, #ffffff 80%);
+}
+
+span {
+    color: red;
+    font-size: 75%;
+
 }
